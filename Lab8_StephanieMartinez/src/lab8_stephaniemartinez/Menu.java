@@ -557,6 +557,7 @@ public class Menu extends javax.swing.JFrame {
         clientes.add(new Clientes("Jose", "Galo", "Amex", 80, "No"));
         clientes.add(new Clientes("Carlos", "Hernández", "Visa", 800, "No"));
         clientes.add(new Clientes("Juan", "Pavón", "Visa", 1000, "No"));
+        clientes.add(new Clientes("Javier", "Cano", "Visa", 2000, "Si"));
         Clientes c1 = (new Clientes("Alejandro", "Martínez", "Amex", 3000, "Si"));
         Clientes c2 = new Clientes("Saro", "Bulnes", "Visa", 4000, "Si");
         Clientes c3 = (new Clientes("Karime", "Elvir", "Visa", 5000, "No"));
@@ -565,6 +566,7 @@ public class Menu extends javax.swing.JFrame {
         Clientes c6 = (new Clientes("Jose", "Galo", "Amex", 80, "No"));
         Clientes c7 = (new Clientes("Carlos", "Hernández", "Visa", 800, "No"));
         Clientes c8 = new Clientes("Juan", "Pavón", "Visa", 1000, "No");
+        Clientes c9 = new Clientes("Javier", "Cano", "Visa", 2000, "Si");
         adminClientes ap = new adminClientes("./clientes.cbm");
         ap.cargarArchivo();
         ap.setClientes(c1);
@@ -575,6 +577,7 @@ public class Menu extends javax.swing.JFrame {
         ap.setClientes(c6);
         ap.setClientes(c7);
         ap.setClientes(c8);
+        ap.setClientes(c9);
         ap.escribirArchivo();
     }
 
