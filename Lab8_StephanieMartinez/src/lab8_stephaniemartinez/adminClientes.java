@@ -79,6 +79,6 @@ public class adminClientes {
             } catch (Exception ex) {
             }
         }
-    }    //lista de clientes inventario
+    }    
 
 }

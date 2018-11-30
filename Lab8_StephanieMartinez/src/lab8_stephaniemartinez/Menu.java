@@ -473,18 +473,24 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        Llenado();
         if (nombre.getText().equalsIgnoreCase("Nosman") && (apellido.getText().equalsIgnoreCase("Mejia"))) {
             JOptionPane.showMessageDialog(this, "Bienvenidos Nosman\nTodo le será gratis :)");
         }
         if (alumno.getSelectedIndex() == 0) {
             int cuenta = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese el número de cuenta"));
         }
+        Clientes c = (new Clientes(nombre.getText(), apellido.getText(), (String) tarjeta.getSelectedItem(), (int) billetera.getValue(), (String) alumno.getSelectedItem()));
         clientes.add(new Clientes(nombre.getText(), apellido.getText(), (String) tarjeta.getSelectedItem(), (int) billetera.getValue(), (String) alumno.getSelectedItem()));
         nombre.setText("");
         apellido.setText("");
         billetera.setValue(0);
         alumno.setSelectedIndex(0);
         tarjeta.setSelectedIndex(0);
+        adminClientes ap = new adminClientes("./clientes.cbm");
+        ap.cargarArchivo();
+        ap.setClientes(c);
+        ap.escribirArchivo();
         JOptionPane.showMessageDialog(this, "Cliente guardado exitosamente");
         crear.setVisible(false);
     }//GEN-LAST:event_jButton10MouseClicked
@@ -551,6 +557,25 @@ public class Menu extends javax.swing.JFrame {
         clientes.add(new Clientes("Jose", "Galo", "Amex", 80, "No"));
         clientes.add(new Clientes("Carlos", "Hernández", "Visa", 800, "No"));
         clientes.add(new Clientes("Juan", "Pavón", "Visa", 1000, "No"));
+        Clientes c1 = (new Clientes("Alejandro", "Martínez", "Amex", 3000, "Si"));
+        Clientes c2 = new Clientes("Saro", "Bulnes", "Visa", 4000, "Si");
+        Clientes c3 = (new Clientes("Karime", "Elvir", "Visa", 5000, "No"));
+        Clientes c4 = (new Clientes("Gabriel", "Irías", "Amex", 6000, "No"));
+        Clientes c5 = (new Clientes("Stephanie", "Handal", "Visa", 30, "No"));
+        Clientes c6 = (new Clientes("Jose", "Galo", "Amex", 80, "No"));
+        Clientes c7 = (new Clientes("Carlos", "Hernández", "Visa", 800, "No"));
+        Clientes c8 = new Clientes("Juan", "Pavón", "Visa", 1000, "No");
+        adminClientes ap = new adminClientes("./clientes.cbm");
+        ap.cargarArchivo();
+        ap.setClientes(c1);
+        ap.setClientes(c2);
+        ap.setClientes(c3);
+        ap.setClientes(c4);
+        ap.setClientes(c5);
+        ap.setClientes(c6);
+        ap.setClientes(c7);
+        ap.setClientes(c8);
+        ap.escribirArchivo();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

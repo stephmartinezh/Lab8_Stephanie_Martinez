@@ -1,9 +1,9 @@
-
 package lab8_stephaniemartinez;
 
 import java.io.Serializable;
 
-public class Clientes {
+public class Clientes implements Serializable {
+
     private String nombre;
     private String apellido;
     private String tarjeta;
