@@ -499,14 +499,15 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12MouseClicked
 
     private void EliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarMouseClicked
-         Llenado();
+        Llenado();
         String listar = "";
         for (int i = 0; i < clientes.size(); i++) {
             listar += i + " - " + clientes.get(i);
         }
         JOptionPane.showMessageDialog(this, listar);
         int pos = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese la posición"));
-        clientes.remove(pos); 
+        clientes.remove(pos);
+        JOptionPane.showMessageDialog(this, "Cliente eliminado exitosamente");
     }//GEN-LAST:event_EliminarMouseClicked
 
     public static void main(String args[]) {
@@ -549,6 +550,7 @@ public class Menu extends javax.swing.JFrame {
         clientes.add(new Clientes("Stephanie", "Handal", "Visa", 30, "No"));
         clientes.add(new Clientes("Jose", "Galo", "Amex", 80, "No"));
         clientes.add(new Clientes("Carlos", "Hernández", "Visa", 800, "No"));
+        clientes.add(new Clientes("Juan", "Pavón", "Visa", 1000, "No"));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
